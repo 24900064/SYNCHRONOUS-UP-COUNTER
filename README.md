@@ -79,6 +79,7 @@ endmodule
 ![Screenshot 2024-12-25 211556](https://github.com/user-attachments/assets/c986ca57-50b3-49d2-befd-264ac72e0f15)
 
 **TRUTH TABLE**
+
 ![Screenshot 2024-12-25 211732](https://github.com/user-attachments/assets/e62da20b-fd27-46d6-9a88-c1056ab2bcf9)
 
 
