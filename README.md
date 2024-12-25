@@ -28,7 +28,15 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+1.	Type the program in Quartus software.
+
+2.	Compile and run the program.
+
+3.	Generate the RTL schematic and save the logic diagram.
+
+4.	Create nodes for inputs and outputs to generate the timing diagram.
+
+5.	For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
@@ -37,10 +45,42 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 Developed by: RegisterNumber:
 */
 
+module synchronous_up_counter (
+
+Input clk, //Clock input
+
+Input reset,
+
+// Reset input (active high)
+
+output reg [3:0] count // 4-bit output
+
+always @(posedge cik or posedge reset) begin
+
+if (reset)
+
+else
+
+end
+
+count < 4'b0000; // Reset the counter to
+
+count < count 1; // Increment the counter
+
+endmodule
+
 **RTL LOGIC UP COUNTER**
+
+![Screenshot 2024-12-25 211546](https://github.com/user-attachments/assets/e393ca4a-8de3-4229-a30e-185c5f28f39b)
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
 
+![Screenshot 2024-12-25 211556](https://github.com/user-attachments/assets/c986ca57-50b3-49d2-befd-264ac72e0f15)
+
 **TRUTH TABLE**
+![Screenshot 2024-12-25 211732](https://github.com/user-attachments/assets/e62da20b-fd27-46d6-9a88-c1056ab2bcf9)
+
 
 **RESULTS**
+Thus the 4 Bit synchronous up counter using Verilog is implemented and validated  their functionality using their functional tables.
