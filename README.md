@@ -40,43 +40,31 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
-*/
 
-module synchronous_up_counter (
+Developed by: Pragatheeshraaj
 
-Input clk, //Clock input
+RegisterNumber:24900064
 
-Input reset,
-
-// Reset input (active high)
-
-output reg [3:0] count // 4-bit output
-
-always @(posedge cik or posedge reset) begin
-
-if (reset)
-
-else
-
+~~~
+module siso(out,clk,rstn);
+input clk,rstn;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+if(!rstn)
+out<=0;
+else 
+out <= out+1;
 end
-
-count < 4'b0000; // Reset the counter to
-
-count < count 1; // Increment the counter
-
-endmodule
-
+endmodule 
+~~~
 **RTL LOGIC UP COUNTER**
-
-![Screenshot 2024-12-25 211546](https://github.com/user-attachments/assets/e393ca4a-8de3-4229-a30e-185c5f28f39b)
-
+![Screenshot 2024-12-30 110156](https://github.com/user-attachments/assets/5d0aacd3-cfdb-4f22-a6e2-ab211a88d901)
 
 **TIMING DIAGRAM FOR IP COUNTER**
 
-![Screenshot 2024-12-25 211556](https://github.com/user-attachments/assets/c986ca57-50b3-49d2-befd-264ac72e0f15)
+![Screenshot 2024-12-30 110344](https://github.com/user-attachments/assets/6750fd6b-0f75-4194-a93e-ecbf4a5e7cca)
 
 **TRUTH TABLE**
 
@@ -84,4 +72,5 @@ endmodule
 
 
 **RESULTS**
+
 Thus the 4 Bit synchronous up counter using Verilog is implemented and validated  their functionality using their functional tables.
